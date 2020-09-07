@@ -2,7 +2,7 @@ package programmers;
 
 import java.util.*;
 
-class Solution {
+public class q12915 {
 	public String[] solution(String[] strings, int n) {
 		String[] answer;
 		Arrays.sort(strings);
