@@ -8,7 +8,9 @@ import java.util.regex.Pattern;
  * Date: 2020-09-14
  */
 public class q12918 {
-    private static final Pattern p = Pattern.compile("^\\d{4}|\\d{6}$");
+    // 참고: https://stackoverflow.com/questions/12784338/match-specific-length-x-or-y
+    private static final Pattern p = Pattern.compile("^(?=(?:.{4}|.{6})$)\\d*$");
+    // private static final Pattern p = Pattern.compile("^\\d{4}|\\d{6}$");
 
     public boolean solution(String s) {
         return p.matcher(s).matches();
