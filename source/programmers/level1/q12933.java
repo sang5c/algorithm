@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * https://programmers.co.kr/learn/courses/30/lessons/12933
  * Title: 정수 내림차순으로 배치하기
- * Date: 2020-09-18
+ * Date: 2020-09-19
  */
 public class q12933 {
     public long solution(long n) {
