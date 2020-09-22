@@ -1,5 +1,6 @@
 # 못(안)푼 문제 모음
 
+## level 1
 * https://programmers.co.kr/learn/courses/30/lessons/12921
     * Title: 소수 찾기
     * Date: 2020-09-15
@@ -43,3 +44,9 @@
     * Title: [2018 카카오 블라인드 공채] 1차 다트게임
     * Date: 2020-09-22
     * 카카오 킵
+
+## level 2
+* https://programmers.co.kr/learn/courses/30/lessons/42584
+    * Title: 주식가격
+    * Date: 2020-09-22
+    * 스택/큐로 분류된 문제인데 스택/큐로 어떻게 푸는지 모르겠음.
