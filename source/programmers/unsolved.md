@@ -12,6 +12,7 @@
 * https://programmers.co.kr/learn/courses/30/lessons/64061
     * Title: 크레인 인형뽑기 게임
     * Date: ?
+    * 카카오 킵
 
 * https://programmers.co.kr/learn/courses/30/lessons/12940
     * Title: 최대공약수와 최소공배수
@@ -27,3 +28,18 @@
     * Title: 핸드폰 번호 가리기
     * Date: 2020-09-21
     * 정규식으로 replaceAll 한거 보고 따라해보려고 남김
+
+* https://programmers.co.kr/learn/courses/30/lessons/17681
+    * Title: [2018 카카오 블라인드 공채] 1차 비밀지도
+    * Date: 2020-09-22
+    * 카카오 킵
+
+* https://programmers.co.kr/learn/courses/30/lessons/42889
+    * Title: [2019 카카오 블라인드 공채] 실패율
+    * Date: 2020-09-22
+    * 카카오 킵
+
+* https://programmers.co.kr/learn/courses/30/lessons/17682
+    * Title: [2018 카카오 블라인드 공채] 1차 다트게임
+    * Date: 2020-09-22
+    * 카카오 킵
