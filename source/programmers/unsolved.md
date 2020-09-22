@@ -46,7 +46,16 @@
     * 카카오 킵
 
 ## level 2
+* https://programmers.co.kr/learn/courses/30/lessons/62048
+    * Title: 멀쩡한 사각형
+    * Date: 2020-09-22
+    * 카카오 킵
+
 * https://programmers.co.kr/learn/courses/30/lessons/42584
     * Title: 주식가격
     * Date: 2020-09-22
     * 스택/큐로 분류된 문제인데 스택/큐로 어떻게 푸는지 모르겠음.
+
+* https://programmers.co.kr/learn/courses/30/lessons/12899
+    * Title: 124 나라의 숫자
+    * Date: 2020-09-22
