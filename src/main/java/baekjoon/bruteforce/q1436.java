@@ -14,8 +14,6 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 public class q1436 {
 
-    public static final String suffix = "666";
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int N = scanner.nextInt();
@@ -25,23 +23,13 @@ public class q1436 {
     }
 
     private static String generateSeries(int n) {
-        if (n == 1) {
-            return suffix;
-        }
-        if (n <= 6)
-            return (n - 1) + suffix;
-
-        if (n == 7) {
-            return "6660";
-        }
-
-        int series = 6661;
+        int series = 1;
         int cnt = 0;
         while (true) {
             if (String.valueOf(series).contains("666")) {
                 cnt++;
             }
-            if (cnt + 7 == n)
+            if (cnt == n)
                 return String.valueOf(series);
             series++;
         }
