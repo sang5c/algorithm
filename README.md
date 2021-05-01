@@ -11,3 +11,19 @@
 
 ## 기타
 - 백준 제출시 클래스명을 Main으로 지정해야 한다.
+
+### 정렬의 종류
+- O(n^2)
+  - 버블 (Bubble)
+  - 선택 (Selection)
+  - 삽입 (Insertion)
+- O(n log n)
+  - 병합 (Merge)
+  - 퀵 (Quick)
+  - 힙 (Heap)
+  - 트리 (Tree)
+- 기타
+  - 셀 (Shell)
+  - 기수 (Radix)
+
+
