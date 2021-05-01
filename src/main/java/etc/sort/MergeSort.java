@@ -28,7 +28,11 @@ public class MergeSort {
 
         int[] leftArr = sort(Arrays.copyOfRange(arr, 0, arr.length / 2));
         int[] rightArr = sort(Arrays.copyOfRange(arr, arr.length / 2, arr.length));
-        int[] mergedArr = new int[arr.length];
+        return merge(arr.length, leftArr, rightArr);
+    }
+
+    private int[] merge(int length, int[] leftArr, int[] rightArr) {
+        int[] mergedArr = new int[length];
 
         int m = 0;  // merged arr index
         int l = 0;  // left arr index
@@ -38,21 +42,60 @@ public class MergeSort {
         while (l < leftArr.length && r < rightArr.length) {
             mergedArr[m++] = leftArr[l] < rightArr[r] ? leftArr[l++] : rightArr[r++];
         }
-
         while (l < leftArr.length) {
             mergedArr[m++] = leftArr[l++];
         }
         while (r < rightArr.length) {
             mergedArr[m++] = rightArr[r++];
         }
-
         return mergedArr;
+    }
+
+    // in-place sort
+    public void newSort(int[] arr, int left, int right) {
+        if (right - left < 2) {
+            return;
+        }
+
+        int mid = left + right;
+        newSort(arr, left, mid / 2);
+        newSort(arr, mid / 2, right);
+        newMerge(arr, left, mid / 2, right);
+
+    }
+
+    private void newMerge(int[] arr, int left, int mid, int right) {
+        // arr[left] arr[right]를 비교해서 정렬해야 한다.
+        // arr 배열을 직접 수정할 경우 정렬 과정중에 index가 변하기 때문에 임시 배열을 사용한다.
+        int[] mergedArr = new int[right - left];
+
+        int m = 0;      // merged arr index
+        int l = left;   // left arr index
+        int r = mid;    // right arr index
+
+        while (l < mid && r < right) {
+            mergedArr[m++] = arr[l] < arr[r] ? arr[l++] : arr[r++];
+        }
+        while (l < mid) {
+            mergedArr[m++] = arr[l++];
+        }
+        while (r < right) {
+            mergedArr[m++] = arr[r++];
+        }
+        for (int i = left; i < right; i++) {
+            arr[i] = mergedArr[i - left];
+        }
     }
 
     @Test
     public void test() {
         assertThat(sort(new int[]{5, 2, 3, 1, 4})).isEqualTo(new int[]{1, 2, 3, 4, 5});
         assertThat(sort(new int[]{5, 4, 3, 2, 1})).isEqualTo(new int[]{1, 2, 3, 4, 5});
+
+        int[] arr = {5, 4, 3, 2, 1};
+        assertThat(arr).isNotEqualTo(new int[]{1, 2, 3, 4, 5});
+        newSort(arr, 0, arr.length);
+        assertThat(arr).isEqualTo(new int[]{1, 2, 3, 4, 5});
     }
 
 }
