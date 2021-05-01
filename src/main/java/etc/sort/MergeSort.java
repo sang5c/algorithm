@@ -61,7 +61,6 @@ public class MergeSort {
         newSort(arr, left, mid / 2);
         newSort(arr, mid / 2, right);
         newMerge(arr, left, mid / 2, right);
-
     }
 
     private void newMerge(int[] arr, int left, int mid, int right) {
@@ -82,9 +81,8 @@ public class MergeSort {
         while (r < right) {
             mergedArr[m++] = arr[r++];
         }
-        for (int i = left; i < right; i++) {
-            arr[i] = mergedArr[i - left];
-        }
+
+        System.arraycopy(mergedArr, 0, arr, left, mergedArr.length);
     }
 
     @Test
@@ -92,7 +90,7 @@ public class MergeSort {
         assertThat(sort(new int[]{5, 2, 3, 1, 4})).isEqualTo(new int[]{1, 2, 3, 4, 5});
         assertThat(sort(new int[]{5, 4, 3, 2, 1})).isEqualTo(new int[]{1, 2, 3, 4, 5});
 
-        int[] arr = {5, 4, 3, 2, 1};
+        int[] arr = {5, 4, 2, 3, 1};
         assertThat(arr).isNotEqualTo(new int[]{1, 2, 3, 4, 5});
         newSort(arr, 0, arr.length);
         assertThat(arr).isEqualTo(new int[]{1, 2, 3, 4, 5});
